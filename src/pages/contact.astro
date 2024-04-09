@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import location from "../assets/location.webp";
+import phone from "../assets/phone.webp";
+import email from "../assets/email.webp";
 ---
 
 <Layout title="Contacto" url="contact">
@@ -7,16 +11,16 @@ import Layout from "../layouts/Layout.astro";
     <div class="border bg-slate-900 rounded-lg m-auto mt-6 lg:w-8/12 px-4">
         <div class="lg:w-8/12 m-auto">
             <section class="mt-6 flex items-center">
-                <img src="/public/location.webp" alt="Ubicación" class="w-8 h-8 me-4" />
+                <Image src={location} alt="Ubicación" class="w-8 h-8 me-4" />
                 <p class="text-lg lg:w-8/12">José Batlle y Ordóñez, Canelones, Departamento de Canelones</p>
             </section>
             <section class="mt-6 flex items-center">
                 <!-- <h2 class="text-2xl font-bold mt-8">Teléfono</h2> -->
-                <img src="/public/phone.webp" alt="Ubicación" class="w-8 h-8 me-4" />
+                <Image src={phone} alt="Ubicación" class="w-8 h-8 me-4" />
                 <p class="text-lg">099402315</p>
             </section>
             <section class="mt-6 flex items-center">
-                <img src="/public/email.webp" alt="Ubicación" class="w-8 h-8 me-4" />
+                <Image src={email} alt="Ubicación" class="w-8 h-8 me-4" />
                 <p class="text-lg">chufle2121@gmail.com</p>
             </section>
             <section class="flex justify-start mb-3">

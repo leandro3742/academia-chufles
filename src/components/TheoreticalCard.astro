@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import pdf from "../assets/pdf.svg";
 interface Props {
     title: string;
     href: string;
@@ -8,7 +10,7 @@ const { title, href } = Astro.props;
 ---
 
 <li class={`w-64 shadow mb-4 rounded flex flex-col bg-[#ffffff] border-gray-200 dark:bg-gray-900`}>
-    <img src="/public/pdf.svg" class="m-auto mt-3 w-6" alt="${title}" />
+    <Image src={pdf} class="m-auto mt-3 w-6" alt="${title}" />
     <section class="px-3 pb-3">
         <h2 class="text-lg font-bold text-center mt-2">{title}</h2>
     </section>
