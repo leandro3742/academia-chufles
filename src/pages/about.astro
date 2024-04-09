@@ -1,0 +1,42 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Acerca de nosotros" url="about">
+    <div class="fadeIn container mx-auto px-4">
+        <h1 class="text-3xl font-bold text-center mt-8">Acerca de nosotros</h1>
+        <p class="text-center mt-4">Chufle's es una escuela de choferes con 27 años de enseñanza. Contamos con vehículos con toda la garantí y de ultima generación. Nos encontramos en la ciudad de Canelones, y llegamos hasta Santa Rosa, Cerrillos, Progreso, San Antonio</p>
+    </div>
+    <div class="fadeIn container mx-auto px-4">
+        <h1 class="text-3xl font-bold text-center mt-8">Nuestra meta</h1>
+        <p class="text-center mt-4">La meta es formar un conductor seguro y responsable de las decisiones que tendrá que tomar, con un buen conocimiento del vehículo y lo mismo en cuanto a reglamentación (claridad ante sus derechos y deberes), siempre desde el marco de prevención de accidentes.</p>
+    </div>
+    <div class="fadeIn container mx-auto px-4 mt-5">
+        <h1 class="text-3xl font-bold text-center mt-8">Nuestros servicios</h1>
+        <div class="flex flex-wrap items-center justify-evenly mt-4">
+            <Card title="Categoria A" body="Permite conducir vehículos de hasta 9 pasajeros, camionetas, y vehículos con remolque hasta 4.000 kg de peso total. Edad mínima: 18 años." img="/public/auto.webp" />
+            <Card title="Categoria C" body="Habilita a mayores de 18 años a conducir vehículos de hasta 9 pasajeros, camionetas y vehículos con remolque, con un peso máximo de 4.000 kg." img="/public/camion.webp" />
+            <Card title="Categorias G2" body="Permite a mayores de 18 años conducir motocicletas y ciclomotores hasta 200 CC de cilindrada. Examen con motos de 60 a 200 CC con cambios no automáticos." img="/public/imagen_moto.webp" />
+            <Card title="Categoria G1" body="Autoriza a personas de 16 años en adelante a conducir ciclomotores de hasta 50 CC sin cambios manuales. El examen se realiza con ciclomotores de hasta 50 CC." img="/public/imagen_moto.webp" />
+        </div>
+    </div>
+</Layout>
+<style>
+    /* Generate animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+    }
+    .container {
+        max-width: 760px;
+    }
+</style>

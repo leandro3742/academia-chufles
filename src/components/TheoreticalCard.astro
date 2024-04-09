@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string;
+    href: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<li class={`w-64 shadow mb-4 rounded flex flex-col bg-[#ffffff] border-gray-200 dark:bg-gray-900`}>
+    <img src="/public/pdf.svg" class="m-auto mt-3 w-6" alt="${title}" />
+    <section class="px-3 pb-3">
+        <h2 class="text-lg font-bold text-center mt-2">{title}</h2>
+    </section>
+    <a class="mt-auto" href={href} target="_blank">
+        <button class="bg-[#f9f9f9] dark:bg-gray-800 text-[#333333] dark:text-gray-300 w-full py-2 rounded-b dark:hover:bg-blue-900 transition rounded">Descargar</button>
+    </a>
+</li>

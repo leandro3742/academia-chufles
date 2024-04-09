@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Carousel from "../components/Carousel.astro";
+---
+
+<Layout title="Academia de choferes chufles" url="home">
+    <main class="fadeIn">
+        <Carousel />
+        <h1 class="text-3xl font-bold text-center mt-8">Nuestros servicios</h1>
+        <div class="fadeIn flex flex-wrap items-center justify-evenly mt-4">
+            <Card title="Categoria A" body="Permite conducir vehículos de hasta 9 pasajeros, camionetas, y vehículos con remolque hasta 4.000 kg de peso total. Edad mínima: 18 años." img="/public/auto.webp" />
+            <Card title="Categoria C" body="Habilita a mayores de 18 años a conducir vehículos de hasta 9 pasajeros, camionetas y vehículos con remolque, con un peso máximo de 4.000 kg." img="/public/camion.webp" />
+            <Card title="Categorias G2" body="Permite a mayores de 18 años conducir motocicletas y ciclomotores hasta 200 CC de cilindrada. Examen con motos de 60 a 200 CC con cambios no automáticos." img="/public/imagen_moto.webp" />
+            <Card title="Categoria G1" body="Autoriza a personas de 16 años en adelante a conducir ciclomotores de hasta 50 CC sin cambios manuales. El examen se realiza con ciclomotores de hasta 50 CC." img="/public/imagen_moto.webp" />
+        </div>
+    </main>
+</Layout>
+
+<style>
+    /* Generate animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 3s;
+    }
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions code {
+        font-size: 0.8em;
+        font-weight: bold;
+        background: rgba(var(--accent-light), 12%);
+        color: rgb(var(--accent-light));
+        border-radius: 4px;
+        padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+</style>
