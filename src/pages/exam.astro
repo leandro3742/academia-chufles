@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Examen" url="exam">
-    <iframe id="miIframe" src="https://preguntometro.vercel.app/iframe"></iframe>
+    <iframe class="opacity-0" id="miIframe" src="https://preguntometro.vercel.app/iframe"></iframe>
 </Layout>
 
 <style>
@@ -16,7 +16,8 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
     const iframe = document.getElementById("miIframe") as HTMLIFrameElement;
-    iframe.onload = function () {
-        iframe.contentWindow.postMessage({ backgroundColor: "#13151a", dark: true }, "https://preguntometro.vercel.app/iframe");
+    iframe.onload = async function () {
+        await iframe.contentWindow.postMessage({ backgroundColor: "#13151a", dark: true }, "https://preguntometro.vercel.app/iframe");
+        iframe.classList.remove("opacity-0");
     };
 </script>
