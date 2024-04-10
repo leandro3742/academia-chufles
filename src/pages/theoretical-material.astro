@@ -1,6 +1,8 @@
 ---
 import TheoreticalCard from "../components/TheoreticalCard.astro";
 import Layout from "../layouts/Layout.astro";
+import guiaNacional1 from "../assets/guiaNacional1.webp";
+import guiaNacional2 from "../assets/guiaNacional2.webp";
 ---
 
 <Layout title="Material teórico" url="theoretical-material">
@@ -10,8 +12,8 @@ import Layout from "../layouts/Layout.astro";
         <section>
             <h3 class="text-3xl font-bold text-center mt-6 mb-4">Guía nacional de conucción</h3>
             <div class="flex flex-wrap flex-col lg:flex-row justify-evenly items-center">
-                <TheoreticalCard title="Teórico auto y motos" href="https://montevideo.gub.uy/sites/default/files/biblioteca/guianacionaldeconduccion.pdf" />
-                <TheoreticalCard title="Teórico licencia profesional" href="https://montevideo.gub.uy/sites/default/files/biblioteca/manualautosymotos_0.pdf" />
+                <TheoreticalCard img={guiaNacional1} title="Teórico auto y motos" href="https://montevideo.gub.uy/sites/default/files/biblioteca/guianacionaldeconduccion.pdf" />
+                <TheoreticalCard img={guiaNacional2} title="Teórico licencia profesional" href="https://montevideo.gub.uy/sites/default/files/biblioteca/manualautosymotos_0.pdf" />
             </div>
             <!--  -->
             <h3 class="text-3xl font-bold text-center mt-6 mb-4">Requisitos para sacar tu licencia profesional</h3>
